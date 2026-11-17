@@ -6,7 +6,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 
 st.title("Atv 4: RGB")
 
-caminho_foto = Path(__file__).resolve().parents[2] / "imagens" / "foto.jpg"
+caminho_foto = Path(__file__).resolve().parents[1] / "imagens" / "foto.jpg"
 
 st.header("1. Leitura da foto")
 col1, col2 = st.columns(2)
@@ -69,4 +69,5 @@ media = ((r + g + b) / 3).astype(np.uint8)
 ponderada = (0.299 * r + 0.587 * g + 0.114 * b).astype(np.uint8)
 col1.image(media, caption="Média")
 col2.image(ponderada, caption="Média ponderada")
+
 
